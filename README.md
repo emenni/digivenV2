@@ -1,38 +1,57 @@
-# Welcome to Remix!
+# remix-template-vite
 
-- [Remix Docs](https://remix.run/docs)
+⚠️ Remix support for Vite is unstable and not recommended for production.
 
-## Development
+📖 See the [Remix Vite docs][remix-vite-docs] for details on supported features.
 
-From your terminal:
+## Setup
 
-```sh
+```shellscript
+npx create-remix@nightly --template pcattori/remix-template-vite
+```
+
+## Minimal server
+
+Spin up a minimal Vite dev server:
+
+```shellscript
 npm run dev
 ```
 
-This starts your app in development mode, rebuilding assets on file changes.
+Or build your app for production and run it:
 
-## Deployment
-
-First, build your app for production:
-
-```sh
+```shellscript
 npm run build
+npm run start
 ```
 
-Then run the app in production mode:
+## Extensible server
 
-```sh
-npm start
+Remix exposes APIs for integrating Vite with a custom server:
+
+```ts
+import {
+  unstable_createViteServer,
+  unstable_loadViteServerBuild,
+} from "@remix-run/dev";
 ```
 
-Now you'll need to pick a host to deploy it to.
+In this template, we'll use Express but remember that these APIs can be used with _any_ Node-compatible server setup that supports standard middleware.
 
-### DIY
+---
 
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
+Spin up the Express server as a dev server:
 
-Make sure to deploy the output of `remix build`
+```shellscript
+npm run dev:express
+```
 
-- `build/`
-- `public/build/`
+Or build your app for production and run it:
+
+```shellscript
+npm run build
+npm run start:express
+```
+
+[remix-vite-docs]: https://remix.run/docs/en/dev/future/vite
+[extensible-server-pr]: https://github.com/remix-run/remix/pull/7682
