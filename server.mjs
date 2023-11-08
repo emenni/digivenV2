@@ -8,6 +8,7 @@ import express from "express";
 
 installGlobals();
 
+
 let vite =
   process.env.NODE_ENV === "production"
     ? undefined

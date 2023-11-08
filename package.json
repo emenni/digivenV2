@@ -9,6 +9,7 @@
     "dev:express:vanilla": "node ./server.mjs",
     "dev:express": "NODE_OPTIONS=\"--trace-warnings\" remix dev --manual -c \"node --watch-path server.js --watch server.js\"",
     "dev": "vite dev",
+    "dev:dbg": "vite dev --debug --port 4000 --host",
     "start:remix": "remix-serve ./build/index.js",
     "start:no-vite": "cross-env NODE_ENV=production node ./server.js",
     "start": "yarn build && NODE_ENV=production node ./server.mjs",
@@ -22,12 +23,16 @@
     "@remix-run/node": "^2.2.0",
     "@remix-run/react": "^2.2.0",
     "@remix-run/serve": "^2.2.0",
+    "class-validator": "^0.14.0",
     "cross-env": "^7.0.3",
     "express": "^4.18.2",
-    "graphql": "^16.8.1",
+    "graphql": "^15.3.0",
+    "graphql-scalars": "^1.22.4",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.2.0",

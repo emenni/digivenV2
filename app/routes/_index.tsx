@@ -1,9 +1,10 @@
 import type { MetaFunction } from "@remix-run/node";
-import i18n from "../data/i18n/index.json";
+import i18n from "../graphql/data/i18n.data.json";
+import type { Offer } from "../graphql/types/i18n.type";
 
 export const meta: MetaFunction = () => {
 
-  const offer = i18n.offer["pt-BR"] as OfferItem[];
+  const offer = i18n.offer["pt-BR"] as Offer[];
   {
     const jsonLdData = {
       "@context": "http://schema.org",
