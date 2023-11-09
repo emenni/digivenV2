@@ -19,6 +19,7 @@ export async function loader() {
   const { data } = await graphQLClient.query({
     query,
   });
+
   return json({ consent: data.consent });
 }
 

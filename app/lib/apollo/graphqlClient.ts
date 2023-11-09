@@ -1,7 +1,7 @@
 import { SchemaLink } from '@apollo/client/link/schema/index.js';
 
 import { buildSchema } from 'type-graphql';
-import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloClient, InMemoryCache } from "@apollo/client/core/";
 import path from 'path';
 import { resolvers } from '../../graphql/resolvers'
 import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
@@ -20,9 +20,10 @@ function buildGraphQLSchema(dir?: string, filename?: string) {
   });
 }
 
+
 export async function getGraphQLClient() {
   if (!graphQLClient) {
-    const schema = await buildGraphQLSchema("./app/graphql", 'schema.graphql');
+    const schema = await buildGraphQLSchema("./app/graphql/schema", 'schema.graphql');
     graphQLClient = new ApolloClient({
       cache: new InMemoryCache(),
       ssrMode: true,
