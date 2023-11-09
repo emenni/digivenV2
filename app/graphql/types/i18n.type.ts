@@ -33,7 +33,7 @@ export class Offer {
 @ObjectType({ description: "Object representing an Array of Offer" })
 export class Offers {
     @Field(_type => [Offer!]!, { description: "" })
-    offers: Offer[];
+    "pt-BR"?: Offer[];
 
 }
 
