@@ -19,21 +19,23 @@ export class Consent {
 @ObjectType({ description: "Object representing an Offer" })
 export class Offer {
     @Field(_type => String, { description: "" })
-    id!: string;
+    id: string;
     @Field(_type => String, { description: "" })
-    type!: string;
+    type: string;
     @Field(_type => String, { description: "" })
-    name!: string;
+    name: string;
     @Field(_type => String, { description: "" })
-    description!: string;
+    description: string;
     @Field(_type => String, { nullable: true, description: "" })
     image?: string;
 }
 
 @ObjectType({ description: "Object representing an Array of Offer" })
 export class Offers {
-    @Field(_type => [Offer!]!, { description: "" })
-    "pt-BR"?: Offer[];
+    @Field(_type => [Offer], { description: "" })
+    enUS?: Offer[];
+    @Field(_type => [Offer], { description: "" })
+    ptBR?: Offer[];
 
 }
 

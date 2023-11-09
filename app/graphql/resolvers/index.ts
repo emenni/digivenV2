@@ -1,4 +1,4 @@
 import { ConsentResolver } from "./consent.resolver"
-//import { OffersResolver } from "./offers.resolver"
+import { OffersResolver } from "./offers.resolver"
 
-export const resolvers = [ConsentResolver] as const;
+export const resolvers = [ConsentResolver, OffersResolver] as const;

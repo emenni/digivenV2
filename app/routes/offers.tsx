@@ -6,7 +6,13 @@ import { useLoaderData } from "@remix-run/react";
 
 const query = gql`
 query GetOffers {
-  offers
+  offers {
+    ptBR {
+        type
+        name
+        description        
+    }
+  }
 }
 `;
 

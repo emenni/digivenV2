@@ -11,7 +11,7 @@ function createI18n<T extends Object>(I18nClass: new () => T, i18nData: Partial<
 @Resolver(_of => Consent)
 export class ConsentResolver {
 
-    private readonly consentText: Consent = createI18n(Consent, i18n.consent["pt-BR"]);
+    private readonly consentText: Consent = createI18n(Consent, i18n.consent["ptBR"]);
 
     @Query(_returns => Consent)
     async consent(): Promise<Consent> {

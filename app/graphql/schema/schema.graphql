@@ -18,6 +18,34 @@ type Consent {
   purecookieTitle: String!
 }
 
+"""Object representing an Offer"""
+type Offer {
+  """"""
+  description: String!
+
+  """"""
+  id: String!
+
+  """"""
+  image: String
+
+  """"""
+  name: String!
+
+  """"""
+  type: String!
+}
+
+"""Object representing an Array of Offer"""
+type Offers {
+  """"""
+  enUS: [Offer!]!
+
+  """"""
+  ptBR: [Offer!]!
+}
+
 type Query {
   consent: Consent!
+  offers: Offers!
 }

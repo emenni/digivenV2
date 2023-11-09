@@ -1,12 +1,12 @@
 {
   "consent": {
-    "pt-BR": {
+    "ptBR": {
       "purecookieDesc": "Este site usa cookies para garantir que você obtenha a melhor experiência. Saiba mais em nossa",
       "purecookieTitle": "Cookie",
       "purecookieButton": "Permitir Cookie",
       "purecookieLink": "<a href='https://www.cssscript.com/privacy-policy/' target='_blank'>Politica de Privacidade</a>"
     },
-    "en-US": {
+    "enUS": {
       "purecookieDesc": "This site uses cookies to ensure you get the best experience. Learn more in our",
       "purecookieTitle": "Cookie",
       "purecookieButton": "Allow Cookie",
@@ -14,7 +14,7 @@
     }
   },
   "offer": {
-    "pt-BR": [
+    "ptBR": [
       {
         "id": "1",
         "type": "service",
@@ -100,7 +100,7 @@
         "image": "analytics-e-relatorios-avancados.webp"
       }
     ],
-    "en-US": [
+    "enUS": [
       {
         "id": "1",
         "type": "service",
@@ -188,7 +188,7 @@
     ]
   },
   "privacyPolicy": {
-    "pt-BR": {
+    "ptBR": {
       "title": "Política de Privacidade",
       "sections": [
         {
@@ -257,7 +257,7 @@
         }
       ]
     },
-    "en-US": {
+    "enUS": {
       "title": "Privacy Policy",
       "sections": [
         {
